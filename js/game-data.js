@@ -29,17 +29,17 @@ function startGame()
        case 1: 
          //console.log('rock');
          $("#comp_choice").html("Rock");
-         $("#response").attr("src","img/1.jpg");
-         break;
+            $('#comp_box1').removeClass('hide'); // Rock
+            break;
        case 2: 
          //console.log('paper');
          $("#comp_choice").html("Paper");
-         $("#response").attr("src","img/2.jpg");
+         $('#comp_box2').removeClass('hide'); // Paper
          break;
        case 3:
          //console.log('scissors');
          $("#comp_choice").html("Scissors");
-         $("#response").attr("src","img/3.png");
+         $('#comp_box3').removeClass('hide'); // Scissor
          break;
       };
 
@@ -83,6 +83,13 @@ function startGame()
 
  function generateReaction(gesture)
  {
+   $('#user_box1').addClass('hide'); // Rock
+   $('#user_box2').addClass('hide'); // Paper
+   $('#user_box3').addClass('hide'); //  Scissor
+
+   $('#comp_box1').addClass('hide'); // Rock
+   $('#comp_box2').addClass('hide'); // Paper
+   $('#comp_box3').addClass('hide'); //  Scissor
    var random_gesture ; 
    var result;
      switch(gesture)
@@ -97,10 +104,12 @@ function startGame()
          break;
        case 1:
          console.log('you played rock');
+
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
          $("#your_choice").html("Rock");
          $("#winner").html(result);
+         $('#user_box1').removeClass('hide');
          break;
        case 2:
          console.log('you played paper');
@@ -108,6 +117,7 @@ function startGame()
          result = declareResult(gesture,random_gesture);
          $("#your_choice").html("Paper");
          $("#winner").html(result);
+         $('#user_box2').removeClass('hide');
          break;
        case 3:
          console.log('you played scissors');
@@ -115,6 +125,7 @@ function startGame()
          result = declareResult(gesture,random_gesture);
          $("#your_choice").html("Scissors");
          $("#winner").html(result);
+         $('#user_box3').removeClass('hide');
          break;
      };
 

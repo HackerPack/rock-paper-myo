@@ -50,6 +50,38 @@
       box-sizing: border-box;
     }
 
+
+  
+
+    body{
+    margin:0px;
+    height: 100%;
+    }
+    
+    .box1 {
+    width:300px;
+    float: left;
+    height: 300px;    
+    margin-right: 30px;
+    }
+    .box2{
+    width: 300px;
+    float: left;
+    height: 300px;
+    margin-right: 30px;
+    }
+    .box3{
+    width: 300px;
+    float: left;
+    height: 300px;
+    }
+    .clear {
+    clear: both;
+    }
+
+
+                              
+
     body {
       font-family: 'Lato', sans-serif;
       color: #202020;
@@ -457,6 +489,23 @@
                                     <tbody id = "row13">
                                     </tbody>
                                 </table>
+
+            <div id="header"></div>
+                
+                <div id="user_box1" class="box1 hide"><img src="../img/1.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="user_box2" class="box2 hide"><img src="../img/paper.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="user_box3" class="box3 hide"><img src="../img/3.png" class ="sidebar-nav" height="300" width="270"/></div>
+
+                <div id="comp_box1" class="box1 hide"><img src="../img/1.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="comp_box2" class="box2 hide"><img src="../img/paper.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="comp_box3" class="box3 hide"><img src="../img/3.png" class ="sidebar-nav" height="300" width="270"/></div>
+
+                <div id="result_box1" class="box1 hide"><img src="../img/happy2.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="result_box2" class="box2 hide"><img src="../img/straight1.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="result_box3" class="box3 hide"><img src="../img/sad1.png" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="clear" class="clear"></div>
+            </div>
+            <div id="footer"></div>
                                 
             <!-- /.row -->
             <div class="panel-body">
@@ -518,7 +567,8 @@
         var ComputerChoice;
         var Winner;
         
-
+        $("#YourScore").html('0');
+        $("#ComputerScore").html('0');
             uid = getId(function(array){});
             getUser(uid,function(data){
                 $("#trustLevel").html(data[0].trustLevel);
@@ -557,3 +607,4 @@
     </script>
 </body>
 </html>
+
