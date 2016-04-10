@@ -386,7 +386,7 @@
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                    <img src="../img/RockPaperScissors-Poster.jpg" class ="sidebar-nav" height="700" width="250"/>
+                    <img src="../img/RockPaperScissors-Poster.png" class ="sidebar-nav" height="700" width="250"/>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
@@ -523,14 +523,14 @@
             getUser(uid,function(data){
                 $("#trustLevel").html(data[0].trustLevel);
             });
-             getMyTasks(uid, function(array){
+             getUserScore(uid, function(array){
                 
                     console.log(array[i]);
                     $("#row13").append('<tr i align=center><td class=taskId style="display: none;">'+array[i].key()+'</td><td  class=user-name >'+array[i].val().Disaster+'</td><td>'+array[i].val().TaskType+'</td><td>'+array[i].val().SentFromLocation+'</td><td>'+array[i].val().OriginalTweet+'</td><td>'+array[i].val().TimeOfTweet+'</td><td>'+Overdue+'</td></tr>');
                 
 
         $("#YourScore").html(YourScore);
-        $("#overdueTasks").html(overdueTasks);
+        
                 $('#row13').children('tr').click(function(){
                     console.log(this);
                     $("#progressModal").modal('show');
@@ -559,8 +559,10 @@
         console.log('Entering');
         uid = getId(function(array){});
         console.log("This val" +uid);
-        //searchTasks();            
+           
 
+
+        startGame();
     });
     
 
