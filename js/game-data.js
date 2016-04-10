@@ -1,3 +1,6 @@
+var UserScore;
+var ComputerScore;
+
 function trumpCard()
 {
 
@@ -150,6 +153,18 @@ function startGame()
         
 
      };
+
+     if(result=="victory"){
+        $("#winner").html(String(result));
+        UserScore++;
+        $("#YourScore").html(String(UserScore));
+     }
+     if(result=="defeat"){
+        $("#winner").html(String(result));
+        ComputerScore++;
+        $("#ComputerScore").html(String(ComputerScore));
+     }
+     
 
  };
 
