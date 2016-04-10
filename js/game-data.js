@@ -1,5 +1,5 @@
-var UserScore;
-var ComputerScore;
+var YourScore=0;
+var ComputerScore=0;
 
 function trumpCard()
 {
@@ -11,10 +11,10 @@ function trumpCard()
 
 function wolfattack()
 {
-  UserScore = 9000;
+  YourScore += 9000;
   ComputerScore = 0;
   $("#myModal").modal();
-             $("#YourScore").html(String(UserScore));
+             $("#YourScore").html(String(YourScore));
              $('#ComputerScore').html(String(ComputerScore));
              var audio = new Audio('../music/wolf-howl5.wav');
             audio.play();
@@ -70,14 +70,20 @@ function startGame()
  {
    if(gesture == 1)
    {
-     if(random_gesture == 1)      
+     if(random_gesture == 1){
+       //$('#result_box2').removeClass('hide');       
        return 'tie';
-     else if(random_gesture == 2)
+     }
+     else if(random_gesture == 2){
+      //$('#comp_box3').removeClass('hide');
        return 'defeat';
-     else
+     }
+     else{
+      //$('#comp_box1').removeClass('hide');
        return 'victory';
      
    }
+ }
    else if(gesture == 2)
    {
 
@@ -158,8 +164,8 @@ function startGame()
 
      if(result=="victory"){
         $("#winner").html(String(result));
-        UserScore++;
-        $("#YourScore").html(String(UserScore));
+        YourScore++;
+        $("#YourScore").html(String(YourScore));
      }
      if(result=="defeat"){
         $("#winner").html(String(result));

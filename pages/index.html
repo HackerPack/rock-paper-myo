@@ -504,10 +504,10 @@
                 <div id="comp_box2" class="box2 hide"><img src="../img/paper.jpg" class ="sidebar-nav" height="300" width="270"/></div>
                 <div id="comp_box3" class="box3 hide"><img src="../img/scissor.png" class ="sidebar-nav" height="300" width="270"/></div>
 
-                <div id="result_box1" class="box1 hide"><img src="../img/happy2.jpg" class ="sidebar-nav" height="300" width="270"/></div>
-                <div id="result_box2" class="box2 hide"><img src="../img/straight1.jpg" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="result_box1" class="box1 hide"><img src="../img/happy2.png" class ="sidebar-nav" height="300" width="270"/></div>
+                <div id="result_box2" class="box2 hide"><img src="../img/straight1.png" class ="sidebar-nav" height="300" width="270"/></div>
                 <div id="result_box3" class="box3 hide"><img src="../img/sad1.png" class ="sidebar-nav" height="300" width="270"/></div>
-                <div id="clear" class="clear"></div>
+                
             </div>
             <div id="footer"></div>
                                 
@@ -596,12 +596,11 @@
     $(document).ready(function(){
         var HighestScore=0;
         
-        var YourChoice=0;
-        var ComputerChoice;
+        
         var Winner;
         
-        $("#YourScore").html('0');
-        $("#ComputerScore").html('0');
+        $("#YourScore").html(String(YourScore));
+        $("#ComputerScore").html(String(ComputerScore));
             uid = getId(function(array){});
             getUser(uid,function(data){
                 $("#trustLevel").html(data[0].trustLevel);
