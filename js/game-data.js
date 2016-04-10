@@ -1,6 +1,9 @@
+function trumpCard()
+{
 
-var ComputerScore=0;
-var UserScore=0;
+  console.log('wolf wins');
+  
+}
 
 function startGame()
              {
@@ -23,11 +26,11 @@ function startGame()
  {
 
     var random_gesture = Math.floor((Math.random() * 3) + 1);
-    console.log("Random gesture"+random_gesture);
     switch(random_gesture)
       {
        case 1: 
          //console.log('rock');
+<<<<<<< HEAD
          $("#comp_choice").html("Rock");
             $('#comp_box1').removeClass('hide'); // Rock
             break;
@@ -40,6 +43,17 @@ function startGame()
          //console.log('scissors');
          $("#comp_choice").html("Scissors");
          $('#comp_box3').removeClass('hide'); // Scissor
+=======
+         $("#response").attr("src","img/1.jpg");
+         break;
+       case 2: 
+         //console.log('paper');
+         $("#response").attr("src","img/2.jpg");
+         break;
+       case 3:
+         //console.log('scissors');
+         $("#response").attr("src","img/3.png");
+>>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
          break;
       };
 
@@ -96,10 +110,6 @@ function startGame()
      {
        case 0 :
          console.log('you played resting');
-         $("#your_choice").html("-");
-         $("#winner").html("-");
-         $("#comp_choice").html("-");
-         
          
          break;
        case 1:
@@ -107,37 +117,43 @@ function startGame()
 
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
+<<<<<<< HEAD
          $("#your_choice").html("Rock");
          $("#winner").html(result);
          $('#user_box1').removeClass('hide');
+=======
+         $("#result").html(result);
+>>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
          break;
        case 2:
          console.log('you played paper');
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
+<<<<<<< HEAD
          $("#your_choice").html("Paper");
          $("#winner").html(result);
          $('#user_box2').removeClass('hide');
+=======
+         $("#result").html(result);
+>>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
          break;
        case 3:
          console.log('you played scissors');
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
+<<<<<<< HEAD
          $("#your_choice").html("Scissors");
          $("#winner").html(result);
          $('#user_box3').removeClass('hide');
+=======
+         $("#result").html(result);
+>>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
          break;
+       case 4:
+        console.log(' you played the trump card');
+        wolfpack
+
      };
-
-     if(result=="victory"){
-        UserScore++;
-
-     }
-     if(result=="defeat"){
-        ComputerScore++;
-     }
-     $("#YourScore").html(String(UserScore));
-     $("#ComputerScore").html(String(ComputerScore));
 
  };
 
