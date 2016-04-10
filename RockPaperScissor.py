@@ -60,12 +60,16 @@ class Listener(libmyo.DeviceListener):
 
     def getCurrentSign(self):
         sign = str(self.pose)
-        if (('wave_out' in sign)):
+        # wave_in is the pack symbol cheat code bitches !!!!
+        if('wave_in' in sign):
+            return 4
+        elif (('wave_out' in sign)):
             return 3
         elif('fist' in sign):
             return 1
         elif('fingers_spread' in sign):
             return 2
+
         return 0
 
     def on_connect(self, myo, timestamp, firmware_version):

@@ -11,9 +11,11 @@ function trumpCard()
 
 function wolfattack()
 {
+  UserScore = 9000;
+  ComputerScore = 0;
   $("#myModal").modal();
-             $("#YourScore").html('9000');
-             $('#ComputerScore').html('0');
+             $("#YourScore").html(String(UserScore));
+             $('#ComputerScore').html(String(ComputerScore));
              var audio = new Audio('../music/wolf-howl5.wav');
             audio.play();
 }
