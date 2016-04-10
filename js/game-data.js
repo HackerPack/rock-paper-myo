@@ -5,6 +5,15 @@ function trumpCard()
   
 }
 
+
+function wolfattack()
+{
+  $("#myModal").modal();
+             $("#YourScore").html('9000');
+             $('#ComputerScore').html('0');
+             var audio = new Audio('../music/wolf-howl5.wav');
+            audio.play();
+}
 function startGame()
              {
    var rootref = new Firebase('https://rock-paper-scissors-game.firebaseio.com/');
@@ -45,6 +54,7 @@ function startGame()
          $('#comp_box3').removeClass('hide'); // Scissor
 
          break;
+         
       };
 
  
@@ -141,7 +151,9 @@ function startGame()
          break;
        case 4:
         console.log(' you played the trump card');
-        wolfpack
+        wolfattack();
+        break;
+        
 
      };
 
