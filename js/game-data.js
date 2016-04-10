@@ -117,37 +117,31 @@ function startGame()
 
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
-<<<<<<< HEAD
+
          $("#your_choice").html("Rock");
          $("#winner").html(result);
          $('#user_box1').removeClass('hide');
-=======
-         $("#result").html(result);
->>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
+
+         
          break;
        case 2:
          console.log('you played paper');
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
-<<<<<<< HEAD
+
          $("#your_choice").html("Paper");
          $("#winner").html(result);
          $('#user_box2').removeClass('hide');
-=======
-         $("#result").html(result);
->>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
          break;
        case 3:
          console.log('you played scissors');
          random_gesture = randomReaction();
          result = declareResult(gesture,random_gesture);
-<<<<<<< HEAD
+
          $("#your_choice").html("Scissors");
          $("#winner").html(result);
          $('#user_box3').removeClass('hide');
-=======
-         $("#result").html(result);
->>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
+
          break;
        case 4:
         console.log(' you played the trump card');
