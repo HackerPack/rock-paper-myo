@@ -13,7 +13,7 @@ class Listener(libmyo.DeviceListener):
     stop the Hub.
     """
 
-    interval = 1n;  # Output only 0.05 seconds
+    interval = 1;  # Output only 0.05 seconds
     firebase = firebase.FirebaseApplication('https://rock-paper-scissors-game.firebaseio.com/', None)
 
     def __init__(self):

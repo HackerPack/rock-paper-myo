@@ -410,8 +410,8 @@
                                 <div class="col-xs-3">
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="HighestScore" align="right"></div>
-                                    <div>Highest score</div>
+                                    <div id="ComputerScore" align="right"></div>
+                                    <div>Computer's score</div>
                                 </div>
                             </div>
                         </div>                   
@@ -513,8 +513,8 @@
     //to display user score
     $(document).ready(function(){
         var HighestScore=0;
-        var YourScore=0;
-        var YourChoice;
+        
+        var YourChoice=0;
         var ComputerChoice;
         var Winner;
         
@@ -525,35 +525,15 @@
             });
              getUserScore(uid, function(array){
                 
-                    console.log(array[i]);
-                    $("#row13").append('<tr i align=center><td class=taskId style="display: none;">'+array[i].key()+'</td><td  class=user-name >'+array[i].val().Disaster+'</td><td>'+array[i].val().TaskType+'</td><td>'+array[i].val().SentFromLocation+'</td><td>'+array[i].val().OriginalTweet+'</td><td>'+array[i].val().TimeOfTweet+'</td><td>'+Overdue+'</td></tr>');
+                    console.log(YourScore);
+                    $("#row13").append('<tr i align=center><td  class=user-name id="your_choice">-</td><td  class=user-name id="comp_choice">'+'-'+'</td><td  class=user-name id="winner">-</td></tr>');
+
                 
 
-        $("#YourScore").html(YourScore);
+        //$("#YourScore").html(UserScore);
+        //$("#HighestScore").html(ComputerScore);
         
-                $('#row13').children('tr').click(function(){
-                    console.log(this);
-                    $("#progressModal").modal('show');
-                    currentid = $(this).find('.taskId').text();
-                    console.log("Current ID: "+currentid);
-                });
-            });
-        console.log('Entering');
-            uid = getId(function(array){});
-                console.log("This val" +uid);
-             getHighestScore(uid, function(array){
-                console.log("Printing data object");
-                console.log(array);
-                console.log("my completed Tasks");
-                for(var i =0;i<(array.length);i++)
-                {
-                    ++HighestScore;
-                    console.log(array[i]);
-                    
-                    $("#row14").append('<tr i align=center><td class=taskId style="display: none;">'+array[i].key()+'</td><td  class=user-name >'+array[i].val().Disaster+'</td><td>'+array[i].val().TaskType+'</td><td>'+array[i].val().SentFromLocation+'</td><td>'+array[i].val().OriginalTweet+'</td><td>'+array[i].val().TimeOfTweet+'</td><td>'+"No"+'</td></tr>');
-                    }
-        $("#HighestScore").html(HighestScore);
-
+                
             });
              
         console.log('Entering');
@@ -562,14 +542,18 @@
            
 
 
-        startGame();
+        
     });
     
 
    </script>
 
 
-   
-    <script src="../js/disaster.js"></script>
+    <script src="../js/game-data.js"></script>
+
+    
+    <script>
+        startGame();
+    </script>
 </body>
 </html>
