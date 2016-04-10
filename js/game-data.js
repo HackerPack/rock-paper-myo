@@ -30,7 +30,7 @@ function startGame()
       {
        case 1: 
          //console.log('rock');
-<<<<<<< HEAD
+
          $("#comp_choice").html("Rock");
             $('#comp_box1').removeClass('hide'); // Rock
             break;
@@ -43,17 +43,7 @@ function startGame()
          //console.log('scissors');
          $("#comp_choice").html("Scissors");
          $('#comp_box3').removeClass('hide'); // Scissor
-=======
-         $("#response").attr("src","img/1.jpg");
-         break;
-       case 2: 
-         //console.log('paper');
-         $("#response").attr("src","img/2.jpg");
-         break;
-       case 3:
-         //console.log('scissors');
-         $("#response").attr("src","img/3.png");
->>>>>>> 2c76d07fc9bb77908b5c586c451191f7e0b5b821
+
          break;
       };
 
